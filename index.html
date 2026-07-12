@@ -3,19 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwissVault</title>
+    <meta name="description" content="SwissVault (SVLT) - Secure Premium Crypto Vault on Base Network">
+    <title>SwissVault | SVLT Token - Secure Crypto Vault on Base</title>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="SwissVault (SVLT) - Premium Secure Crypto Vault">
+    <meta property="og:description" content="SwissVault Token on Base Network. Institutional-grade security meets decentralized finance.">
+    <meta property="og:image" content="https://swissvaulttoken.com/banner.jpg">
+    <meta property="og:url" content="https://swissvaulttoken.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SwissVault (SVLT) - Premium Secure Crypto Vault">
+    <meta name="twitter:description" content="SwissVault Token on Base Network.">
+    <meta name="twitter:image" content="https://swissvaulttoken.com/banner.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; }
+        .hero-bg { background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%); }
+        .glass { background: rgba(255,255,255,0.08); backdrop-filter: blur(20px); border: 1px solid rgba(255,215,0,0.2); }
+        .gold-text { background: linear-gradient(90deg, #f4c430, #ffd700, #f4c430); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section-title { font-family: 'Playfair Display', sans-serif; }
+        .nav-link:hover { color: #f4c430; transform: translateY(-2px); }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        .gold-glow { box-shadow: 0 0 30px rgba(244, 196, 48, 0.5); }
+    </style>
 </head>
-<body style="background:#0a1321;color:#fff;text-align:center;padding:60px;font-family:Arial,sans-serif;">
-    <img src="https://i.imgur.com/08wJZPo.png" width="420"><br><br>
-    <h1 style="color:#facc15;font-size:3.8rem;">SWISSVAULT</h1>
-    <p style="font-size:1.6rem;margin:20px 0;">Secure Swiss Vault Token on Base Chain</p>
-    
-    <div style="background:#1e2937;padding:30px;border-radius:15px;max-width:700px;margin:40px auto;">
-        <strong>Token Address:</strong><br><br>
-        <code style="word-break:break-all;font-size:1.15rem;">0xA49b52F78Ce58IAEE567C386564C8D4A789F6d7A</code>
-    </div>
-    
-    <a href="https://dexscreener.com/base/0xa49b52f78ce58iaee567c386564c8d4a789f6d7a" target="_blank" style="background:#facc15;color:#000;padding:16px 40px;border-radius:50px;text-decoration:none;margin:10px;display:inline-block;">DexScreener</a>
-    <a href="https://basescan.org/token/0xA49b52F78Ce58IAEE567C386564C8D4A789F6d7A" target="_blank" style="background:#facc15;color:#000;padding:16px 40px;border-radius:50px;text-decoration:none;margin:10px;display:inline-block;">BaseScan</a>
+<body class="bg-[#0a0a0a] text-white overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-br from-yellow-400 to-amber-600 rounded-full flex items-center justify-center text-black font-bold text-xl">SV</div>
+                <span class="text-2xl font-bold">SwissVault</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#why" class="nav-link">Why Us</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#tokenomics" class="nav-link">Tokenomics</a>
+                <a href="#roadmap" class="nav-link">Roadmap</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button onclick="copyContract()" class="px-5 py-2.5 text-sm font-semibold border border-yellow-400/50 hover:border-yellow-400 rounded-full flex items-center gap-2">
+                    <i class="fas fa-copy"></i> Copy CA
+                </button>
+                <a href="https://t.me/SwissVaultOfficial" target="_blank" class="px-6 py-2.5 bg-white text-black font-semibold rounded-full hover:bg-yellow-400 transition-colors">Join Telegram</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg min-h-screen flex items-center relative pt-20">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <h1 class="text-7xl md:text-8xl font-bold leading-none section-title">
+                    SWISS<br>PRECISION.<br><span class="gold-text">VAULTED</span> SECURITY.
+                </h1>
+                <p class="text-xl text-gray-400">SwissVault (SVLT) on Base Network</p>
+                
+                <div class="flex flex-wrap gap-4">
+                    <button onclick="addToMetaMask()" class="px-8 py-4 bg-gradient-to-r from-yellow-400 to-amber-500 text-black font-bold rounded-2xl flex items-center gap-3">Add to MetaMask</button>
+                    <a href="https://basescan.org/address/0x5669b4C7644deCF154111146926d679BA664a3fb" target="_blank" class="px-8 py-4 border border-white/60 hover:border-yellow-400 rounded-2xl">View on BaseScan</a>
+                </div>
+            </div>
+            
+            <div class="relative">
+                <img src="banner.jpg" alt="SwissVault Banner" class="w-full max-w-lg rounded-3xl gold-glow animate-float">
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function copyContract() {
+            navigator.clipboard.writeText("0x5669b4C7644deCF154111146926d679BA664a3fb");
+            alert("Contract Address Copied!");
+        }
+        async function addToMetaMask() {
+            if (window.ethereum) {
+                await window.ethereum.request({
+                    method: 'wallet_watchAsset',
+                    params: { type: 'ERC20', options: { address: '0x5669b4C7644deCF154111146926d679BA664a3fb', symbol: 'SVLT', decimals: 18, image: 'logo.png' } }
+                });
+            } else {
+                alert("Please install MetaMask!");
+            }
+        }
+    </script>
 </body>
 </html>
